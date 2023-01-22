@@ -26,26 +26,12 @@ html{
     display: block;
 }
 
-/*Botones comprar(carrito) y add(producto) y BENUCBER(Hero)*/
-.btn-add,
-.hero-info a {
+
+.btn-add{
     transition: all 0.2s ease-out;
 }
 
-.btn-add:hover,
-.hero-info a:hover {
+.btn-add:hover{
     background-color: red;
-    transition: all 0.2s ease-in;
-}
-
-  /* Boton ver mas de la sección de productos */
-.btn-load {
-    transition: all 0.2s ease-out;
-    font-weight: 600;
-}
-
-.btn-load:hover {
-    background-color: var(--electric);
-    color: var(--text-white);
     transition: all 0.2s ease-in;
 }
