@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME.DECO</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animaciones.css">
+    <link rel="stylesheet" href="animaciones.css">
+    <script src="https://kit.fontawesome.com/887a835504.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="navbar__img">
+            <a href="index.html"><img src="assets/images/Logo-img.png" alt="Logo-HOME.DECO"></a>
+        </div>
+
+        <!-- Menu -->
+
+        <label for="menu-toggle" class="menu-label">
+            <img src="./assets/svg/menu.svg" alt="" class="menu-icon" />
+        </label>
+        <input type="checkbox" id="menu-toggle" />
+
+        <!-- lista de Navegación -->
+        <ul>
+            <li>
+                <a class="navbar__link active" href="#">Home</a>
+            </li>
+            <li>
+                <select class="navbar__link--product" onchange="location = this.value;">
+                    <option value="" disabled selected>Productos</option>
+                    <option value="productos/muebles.html">Muebles</option>
+                    <option value="productos/accesorios.html">Accesorios</option>
+                    <option value="productos/ropa.html">Remeras</option>
+                    <option value="productos/pantalones.html">Pantalones</option>
+                    <option value="productos/hombre.html">Hombre</option>
+                    <option value="productos/mujer.html">Mujer</option>
+                    <option value="productos/niño.html">niño</option>
+                </select>
+            </li>
+            <li>
+                <a class="navbar__link" href="#">Sobre nosotros</a>
+            </li>
+            <li>
+                <a class="navbar__link" href="#">Contacto</a>
+            </li>
+
+            
+        </ul>
+            <li>
+                <a class="login__text--link" href="login.html">
+                    <img src="assets/svg/perfil.svg" alt="human-perfil">Ingresar / registrarme
+                </a>
+            </li>
+            
+        </ul>
+        <label for="cart-toggle" class="cart-label">
+            <img src="assets/svg/shopping-cart.svg" alt="Carrito de compras" class="cart-icon" />
+        </label>
+        <input type="checkbox" id="cart-toggle" />
+
+        <div class="cart">
+            <h2>Tus Productos</h2>
+            <div class="alert alert-info">El carrito de compras está vacío. </div>
+            <span class="divider"></span>
+    
+            <div class="cart-total">
+            <p>Total:</p>
+            <span>00000.00$</span>
+            </div>
+            <button class="btn-add">Comprar</button>
+        </div>
+        <!-- AGREGAMOS UN DIV VACIO DE CLASE OVERLAY PARA EFECTO GLASS AL ABRIR MENU HAMBURGUESA Y CARRITO -->
+        <div class="overlay"></div>
+
+    </nav>
+
+    <main>
+        
+        <!-- Carousel -->
+        <section id="contentCarousel">
+            <div class="carousel" id="carousel-1">
+                <div class="tarjetaCarousel" id="tarjetaCarousel-1">
+                    <img src="assets/images/arboles.jpg" alt="">
+                </div>
+                <div class="controlsCarousel">
+                    <a href="#carousel-3">
+                        <img src="assets/svg/arrow-left.svg" alt="arrow-left" class="left-img">
+                    </a>
+                    <a href="#carousel-2">
+                        <img src="assets/svg/arrow-right.svg" alt="arrow-right" class="right-img">
+                    </a>
+                </div>
+            </div>
+            <div class="carousel" id="carousel-2">
+                <div class="tarjetaCarousel" id="tarjetaCarousel-2">
+                    <img src="assets/images/geirangerfjord.jpg" alt="">
+                </div>
+                <div class="controlsCarousel">
+                    <a href="#carousel-1">
+                        <img src="assets/svg/arrow-left.svg" alt="arrow-left" class="left-img">
+                    </a>
+                    <a href="#carousel-3">
+                        <img src="assets/svg/arrow-right.svg" alt="arrow-right" class="right-img">
+                    </a>
+                </div>
+            </div>
+            <div class="carousel" id="carousel-3">
+                <div class="tarjetaCarousel" id="tarjetacarousel-3">
+                <img src="assets/images/pez-ilustracion.jpg" alt="">
+                </div>
+                <div class="controlsCarousel">
+                    <a href="#carousel-2">
+                        <img src="assets/svg/arrow-left.svg" alt="arrow-left" class="left-img">
+                    </a>
+                    <a href="#carousel-1">
+                        <img src="assets/svg/arrow-right.svg" alt="arrow-right" class="right-img">
+                    </a>
+                </div>
+            </div>
+            <div id="carousel__Dots">
+                <a href="#carousel-1">
+                    <img src="assets/svg/dot.svg" alt="">
+                </a>
+                <a href="#carousel-2">
+                    <img src="assets/svg/dot.svg" alt="">
+                </a>
+                <a href="#carousel-3">
+                    <img src="assets/svg/dot.svg" alt="">
+                </a>
+        </div>
+        </section>
+        
+    </main>
+</body>
+</html>

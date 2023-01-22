@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Martel+Sans:wght@300;400;600;700;800;900&family=Shanti&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Biryani', 'Martel Sans', 'Shanti', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #0f0e17;
+}
+
+/* Header */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 10px 15%;
+}
+
+#navbar .navbar__img img{
+    width: 190px;
+}
+
+#navbar ul{
+    display: flex;
+    gap: 25px;
+}
+
+#navbar .navbar__link{
+    color: #fffffe;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#navbar .active{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#navbar label img{
+    width: 29px;
+}
+
+.cart-icon {
+    font-weight: 600;
+    border-radius: 10px;
+    margin-right: 1rem;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+/* MENU HAMBURGUESA Desktop */
+#menu-toggle, #cart-toggle, .menu-label{
+    display: none;
+}
+
+/*carrito*/
+.cart {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 400px;
+    padding: 50px 30px;
+    background: linear-gradient(to top, #0f0e17, #0f0e17);
+    border-left: 1px solid #ab2122;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: calc(100vh - 65px);
+    overflow-y: scroll;
+    z-index: 2;
+    transform: translate(200%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+
+/*OCULTAR BARRA DE SCROLL DEL CARRITO*/
+
+.cart::-webkit-scrollbar {
+    display: none;
+}
+
+.cart h2 {
+    color: #fffffe;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.alert{
+    color: #fffffe;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.divider {
+    margin-top: 20px;
+    border: 0.5px solid #a62122;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cart-total p {
+    color: #fffffe;
+    font-weight: 700;
+}
+
+.cart-total span {
+    color: #fffffe;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.btn-add {
+    background: #ff8906;
+    border: none;
+    padding: 10px 35px;
+    color: #fffffe;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*Toggle del carro*/
+#cart-toggle:checked + .cart {
+    transform: translate(0%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+
+#navbar .login__text--link{
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    color: #979796;
+    font-size: 13px;
+}
+
+#navbar .login__text--link:hover{
+    text-decoration: none;
+}
+
+#navbar .login__text--link img{
+    width: 33px;
+}
+
+select.navbar__link--product{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fffffe;
+}
+
+select.navbar__link--product option{
+    color: #fffffe;
+    background: #0f0e17;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+select option[disabled] {
+    display: none;
+}
+
+/* Carousel */
+#contentCarousel{
+    max-width: 1600px;
+    height: 340px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel{
+    position: relative;
+    height: 100%;
+}
+
+.tarjetaCarousel{
+    height: 100%;
+}
+
+.controlsCarousel{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controlsCarousel img{
+    width: 25px;
+    height: 100px;
+}
+
+.left-img{
+    background: rgba(255, 255, 255, 0.257);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 12%);
+    -webkit-border-bottom-right-radius: 64px;
+    border-bottom-right-radius: 64px;
+    -webkit-border-top-right-radius: 64px;
+    border-top-right-radius: 64px;
+}
+
+.right-img{
+    background: rgba(255, 255, 255, 0.257);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 12%);
+    -webkit-border-top-left-radius: 64px;
+    border-bottom-top-radius: 64px;
+    -webkit-border-bottom-left-radius: 64px;
+    border-top-left-radius: 64px;
+}
+
+#carousel__Dots{
+    position: absolute;
+    top: 42%;
+    left: 48%;
+    height: 30px;
+    max-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#carousel__Dots  img{
+    width: 25px;
+    height: 40px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
