@@ -30,6 +30,5 @@
 @media (min-width: 576px){
     .container__categories {
     max-width: 100%;
-    max-width: 540px;
     }
 }
