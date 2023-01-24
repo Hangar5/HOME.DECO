@@ -7,19 +7,19 @@
     <title>HOME.DECO</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animaciones.css">
+    <link rel="stylesheet" href="assets/css/mediaquaries.css">
     <link rel="stylesheet" href="animaciones.css">
-    <script src="https://kit.fontawesome.com/887a835504.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav id="navbar">
+    <!--HEADER-->
+    <header id="header">
         <div class="navbar__img">
             <a href="index.html"><img src="assets/images/Logo-img.png" alt="Logo-HOME.DECO"></a>
         </div>
-
+    <nav class="header__navbar">
         <!-- Menu -->
-
         <label for="menu-toggle" class="menu-label">
             <img src="./assets/svg/menu.svg" alt="" class="menu-icon" />
         </label>
@@ -59,7 +59,7 @@
             
         </ul>
         <label for="cart-toggle" class="cart-label">
-            <img src="assets/svg/shopping-cart.svg" alt="Carrito de compras" class="cart-icon" />
+            <i class="fa-solid fa-cart-shopping cart-icon"></i>
         </label>
         <input type="checkbox" id="cart-toggle" />
 
@@ -74,67 +74,81 @@
             </div>
             <button class="btn-add">Comprar</button>
         </div>
-        <!-- AGREGAMOS UN DIV VACIO DE CLASE OVERLAY PARA EFECTO GLASS AL ABRIR MENU HAMBURGUESA Y CARRITO -->
         <div class="overlay"></div>
 
     </nav>
-
+    </header>
     <main>
-        
-        <!-- Carousel -->
-        <section id="contentCarousel">
-            <div class="carousel" id="carousel-1">
-                <div class="tarjetaCarousel" id="tarjetaCarousel-1">
-                    <img src="assets/images/arboles.jpg" alt="">
-                </div>
-                <div class="controlsCarousel">
-                    <a href="#carousel-3">
-                        <img src="assets/svg/arrow-left.svg" alt="arrow-left" class="left-img">
-                    </a>
-                    <a href="#carousel-2">
-                        <img src="assets/svg/arrow-right.svg" alt="arrow-right" class="right-img">
-                    </a>
-                </div>
+
+        <!-- Hero -->
+        <section id="hero">
+            <div class="hero__info text--color title--color">
+                <h1 class="title--color">HOME.DECO: la tienda de decoración y moda que estabas buscando</h1>
+                <p>En <span>HOME.DECO</span> ofrecemos una amplia variedad de productos para decorar tu hogar con estilo, incluyendo muebles, ropa y accesorios de iluminación. Ofrecemos también asesoramiento personalizado para ayudarte a encontrar lo que mejor se adapte a tus necesidades y gustos.</p>
             </div>
-            <div class="carousel" id="carousel-2">
-                <div class="tarjetaCarousel" id="tarjetaCarousel-2">
-                    <img src="assets/images/geirangerfjord.jpg" alt="">
-                </div>
-                <div class="controlsCarousel">
-                    <a href="#carousel-1">
-                        <img src="assets/svg/arrow-left.svg" alt="arrow-left" class="left-img">
-                    </a>
-                    <a href="#carousel-3">
-                        <img src="assets/svg/arrow-right.svg" alt="arrow-right" class="right-img">
-                    </a>
-                </div>
+            <div class="hero__container tamaño--img">
+                <img src="assets/svg/img-hero.svg" alt="">
             </div>
-            <div class="carousel" id="carousel-3">
-                <div class="tarjetaCarousel" id="tarjetacarousel-3">
-                <img src="assets/images/pez-ilustracion.jpg" alt="">
-                </div>
-                <div class="controlsCarousel">
-                    <a href="#carousel-2">
-                        <img src="assets/svg/arrow-left.svg" alt="arrow-left" class="left-img">
-                    </a>
-                    <a href="#carousel-1">
-                        <img src="assets/svg/arrow-right.svg" alt="arrow-right" class="right-img">
-                    </a>
-                </div>
-            </div>
-            <div id="carousel__Dots">
-                <a href="#carousel-1">
-                    <img src="assets/svg/dot.svg" alt="">
-                </a>
-                <a href="#carousel-2">
-                    <img src="assets/svg/dot.svg" alt="">
-                </a>
-                <a href="#carousel-3">
-                    <img src="assets/svg/dot.svg" alt="">
-                </a>
-        </div>
         </section>
-        
+
+
+
+        <section id="products">
+            <h2>PRODUCTOS</h2>
+            <div class="decorate"></div>
+            <div class="products__links">
+                <a class="btn btn--ghost btn__color" href="#">Muebles</a>
+                <a class="btn btn--ghost btn__color" href="#">Accesorios de iluminación</a>
+                <a class="btn btn--ghost btn__color" href="#">Accesorios decorativos</a>
+                <a class="btn btn--ghost btn__color" href="#">Productos para el cuidado del hogar</a>
+                <a class="btn btn--ghost btn__color" href="#">Pantalones</a>
+                <a class="btn btn--ghost btn__color" href="#">Remeras</a>
+            </div>
+        </section>
+
+        <section id="product__categories">
+            <div class="container__categories">
+                <div class="product__categories--container">
+                    <div class="product__categories--item">
+                        <div class="product__categories--item--inside">
+                            <img src="assets/images/camperas-buzos (1).jpg" alt="alt="Abrigos, Camperas y Rompevientos"">
+                            <h2>Campera y buzos</h2>
+                        </div>
+                    </div>
+                    <div class="product__categories--item">
+                        <a href="#">
+                            <img src="assets/images/mochilas-bolsos.jpg" alt="mochilas de camping y urbanas">
+                            <h2>Mochilas y bolsos</h2>
+                        </a>
+                    </div>
+                    <div class="product__categories--item">
+                        <a href="#">
+                            <img src="assets/images/zapatillas-botas.jpg" alt="zapatillas-botas">
+                            <h2>zapatillas y botas</h2>
+                        </a>
+                    </div>
+                    <div class="product__categories--item">
+                        <a href="#">
+                            <img  src="assets/images/pantalones-shorts.jpg" alt="pantalones-shorts">
+                            <h2>pantalones y shorts</h2>
+                        </a>
+                    </div>
+                    <div class="product__categories--item">
+                        <a href="#">
+                            <img src="assets/images/muebles.jpg" alt="muebles y decoración">
+                            <h2>Muebles</h2>
+                        </a>
+                    </div>
+                    <div class="product__categories--item">
+                        <a href="#">
+                            <img src="assets/images/Iluminación.jpg" alt="accesorios de iluminación">
+                            <h2>Accesorios de iluminación</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 </body>
 </html>
