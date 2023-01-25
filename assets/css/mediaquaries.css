@@ -1,0 +1,41 @@
+/* Tablet */
+@media (max-width: 992px){
+
+/* header */
+ul{
+    position: absolute;
+    top: 65px;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    flex-direction: column;
+    background-color:black;
+    border: 2px solid yellow;
+    border-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    align-items: flex-start;
+    padding: 45px 30px;
+    gap: 25px;
+    z-index: 2;
+    display: none;
+}
+
+ul .navbar__link{
+    font-size: 18px;
+}
+
+.menu-label {
+    display: flex;
+    order: 2;
+    cursor: pointer;
+}
+
+.menu-label img {
+    height: 20px;
+    width: 25px;
+}
+
+#menu-toggle:checked + ul {
+    display: flex;
+}
+}
