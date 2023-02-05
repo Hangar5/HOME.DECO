@@ -22,24 +22,21 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 65px;
-    padding: 0 5%;
+    padding: 0 3%;
     margin: 0 auto;
     top: 0;
     z-index: 2; 
 }
 
-#header .header__navbar{
+#header .header__navbar, ul{
     display: flex;
-    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 #header .navbar__img img{
     width: 190px;
-}
-
-#header ul{
-    display: flex;
-    gap: 25px;
 }
 
 #header .navbar__link{
@@ -198,19 +195,20 @@ main{
 /*HERO*/
 #hero{
     padding: 70px 0;
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 65px auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 150px;
+    gap: 100px;
 }
 
 #hero .hero__info{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
+    width: 40%;
 }
 
 #hero h1{
@@ -230,8 +228,8 @@ main{
 }
 
 #hero .tamaño--img img{
-    width: 800px;
-    height: 100%;
+    width: 400px;
+    height: 550px;
     border: 5px solid #ff8906;
     border-radius: 8px;
 }
@@ -249,7 +247,7 @@ main{
 #productos{
     padding: 20px 0;
     margin: 65px auto;
-    max-width: 1600px;
+    max-width: 1250px;
     display: flex;
     align-items: center;
     justify-content: center;
