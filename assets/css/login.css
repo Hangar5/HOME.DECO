@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Martel+Sans:wght@300;400;600;700;800;900&family=Shanti&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Biryani', 'Martel Sans', 'Shanti', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #16161a;
+}
+
+/*HEADER*/
+#header{
+    background: #242629;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    padding: 0 3%;
+    margin: 0 auto;
+    top: 0;
+    z-index: 2; 
+}
+
+#header .header__navbar, ul{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+
+#header .navbar__img img{
+    width: 190px;
+}
+
+#header .navbar__link{
+    color: #fffffe;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#header .active{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#header label img{
+    width: 49px;
+    height: 30px;
+}
+
+/*SELECT-PRODUCT-NAVBAR*/
+select.navbar__link--product{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fffffe;
+}
+
+select.navbar__link--product option{
+    color: #fffffe;
+    background: #0f0e17;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+select option[disabled] {
+    display: none;
+}
+
+/* MENU HAMBURGUESA Desktop */
+#menu-toggle, 
+#cart-toggle,
+.menu-label{
+    display: none;
+}
+
+.cart-icon {
+    font-weight: 600;
+    border-radius: 10px;
+    margin-right: 1rem;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+/*carrito*/
+.cart {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 400px;
+    padding: 50px 30px;
+    background: linear-gradient(to top, #0f0e17, #0f0e17);
+    border-left: 1px solid #ab2122;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: calc(100vh - 65px);
+    overflow-y: scroll;
+    z-index: 2;
+    transform: translate(200%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+
+.cart-label{
+    margin-top: 3px;
+}
+
+/*OCULTAR BARRA DE SCROLL DEL CARRITO*/
+.cart::-webkit-scrollbar {
+    display: none;
+}
+
+.cart h2 {
+    color: #fffffe;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.alert{
+    color: #fffffe;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.divider {
+    margin-top: 20px;
+    border: 0.5px solid #a62122;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cart-total p {
+    color: #fffffe;
+    font-weight: 700;
+}
+
+.cart-total span {
+    color: #fffffe;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.btn-add {
+    background: #ff8906;
+    border: none;
+    padding: 10px 35px;
+    color: #fffffe;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#header .login__text--link{
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    color: #979796;
+    font-size: 13px;
+}
+
+#header .login__text--link:hover{
+    text-decoration: none;
+}
+
+#header .login__text--link img{
+    width: 33px;
+}
+
+/* Form-log */
+#form-log{
+    margin: 150px auto;
+    max-width: 1200px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+#form-log .forgot-pass{
+    color:#1877f2;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#form-log .forgot-pass:hover{
+    text-decoration: underline;
+}
+
+#form-log .password {
+    position: relative; /* agrega una referencia relativa al campo de contraseña */
+    display: flex; /* convierte el campo de contraseña en un elemento flex */
+}
+
+#form-log #password-input {
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 14px 16px;
+    width: 330px;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+
+#username, .password {
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 14px 16px;
+    width: 330px;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+
+
+.form-btn{
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 332px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 
+    200ms cubic-bezier(.08,.52,.52,1) box-shadow, 
+    200ms cubic-bezier(.08,.52,.52,1) transform;
+    box-sizing: content-box;
+    color: #fff;
+    font-weight: bold;
+}
+
+.form-btn:hover{
+    background: #114cc3;
+}
+
+._8icz {
+    align-items: center;
+    border-bottom: 1px solid #dadde1;
+    display: flex;
+    margin: 20px 16px;
+    text-align: center;
+    width: 90%;
+}
+
+.regist-btn{
+    background-color: #42b72a;
+    border: none;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    border-radius: 6px;
+    transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+}
+
+.regist-btn #register-btn{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: content-box;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.password{
+    background: #404040;
+    border-radius: 6px ;
+    padding: 14px 16px;
+    width: 330px ;
+    height: 65px;
+    position: relative;
+    box-shadow: 0 0 12px 0px rgba(1, 1, 1, 0.25);
+}
+
+.password-background{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border-radius: 6px;
+    top: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+.password-toggle{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.toggle-eye{
+    position: absolute;
+    top: 24px;
+    right: 27px;
+    font-size: 22px;
+}
+
+.toggle-eye.close{
+    transition: 0.4s all ease-in-out;
+}
+
+.toggle-eye.open{
+    transition: 0.2s all ease-out
+}
+
+.password-lock{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+
+.password-input{
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #000000;
+    outline: none;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+    -webkit-text-security: none;
+}
+
+.password-toggle:checked ~ .password-background{
+    width: 50px;
+    height: 50px;
+    right: 12.5px;
+    
+}
+
+.password-toggle:checked ~ .password-input{
+    -webkit-text-security: circle;
+}
+
+.password-toggle:checked ~ .password-lock{
+    color: #000000;
+}
+
+.password-toggle:checked ~ .toggle-eye.close{
+    opacity: 0;
+}
+
+
+/* Tablet */
+@media (max-width: 992px){
+
+    /* header */
+    ul{
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0%;
+        width: 100%;
+        flex-direction: column;
+        background-color:black;
+        border: 2px solid yellow;
+        border-top: 0px;
+        border-radius: 0px 0px 15px 15px;
+        align-items: flex-start;
+        padding: 60px 30px;
+        gap: 25px;
+        z-index: 2;
+        display: none;
+    }
+    
+    li .navbar__link{
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    
+    .login__text--link {
+        position: absolute;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
+        color: #979796;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    
+    .menu-label {
+        display: flex;
+        order: 2;
+        cursor: pointer;
+    }
+    
+    .menu-label img {
+        height: 20px;
+        width: 25px;
+    }
+    
+    #menu-toggle:checked ~ ul{
+        display: flex;
+    }
+}
