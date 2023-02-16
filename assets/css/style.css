@@ -45,6 +45,10 @@ body{
     text-transform: uppercase;
 }
 
+#header .navbar__link:hover{
+    color: #e8e3c9;
+}
+
 #header .active{
     font-size: 14px;
     font-weight: bold;
@@ -60,13 +64,17 @@ select.navbar__link--product{
     background: none;
     border: none;
     outline: none;
+    text-align: center;
+    padding: 0px 7px;
     font-size: 14px;
     text-transform: uppercase;
     color: #fffffe;
+    background: #0f0e17;
+    border-radius: 10px;
 }
 
 select.navbar__link--product option{
-    color: #fffffe;
+    color: #fff;
     background: #0f0e17;
     text-transform: uppercase;
     font-size: 14px;
@@ -310,7 +318,7 @@ main{
 
 #productos .btn-color:hover{
     text-decoration: underline;
-    color: #ff8906;
+    color: #ea4848;
 }
 
 /*PRODUCT CATEGORIAS*/
