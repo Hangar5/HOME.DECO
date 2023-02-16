@@ -366,6 +366,23 @@ select option[disabled] {
     opacity: 0;
 }
 
+/*SCROLL*/
+/* Define el estilo del scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* ancho del scrollbar */
+}
+
+  /* Define el color del thumb (la barra que se mueve) */
+::-webkit-scrollbar-thumb {
+    background-color: #666; /* color del thumb */
+}
+
+  /* Define el color del fondo del scrollbar */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* color del fondo */
+}
+
+
 
 /* Tablet */
 @media (max-width: 992px){
