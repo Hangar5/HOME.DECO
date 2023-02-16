@@ -32,7 +32,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
 }
 
 #header .navbar__img img{
@@ -100,7 +99,6 @@ select option[disabled] {
     position: absolute;
     top: 65px;
     right: 0;
-    width: 400px;
     padding: 50px 30px;
     background: linear-gradient(to top, #0f0e17, #0f0e17);
     border-left: 1px solid #ab2122;
@@ -384,7 +382,7 @@ select option[disabled] {
         border-radius: 0px 0px 15px 15px;
         align-items: flex-start;
         padding: 60px 30px;
-        gap: 25px;
+        gap: 15px;
         z-index: 2;
         display: none;
     }
