@@ -30,9 +30,9 @@ body{
 
 #header .header__navbar, ul{
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 #header .navbar__img img{
@@ -221,9 +221,10 @@ select option[disabled] {
 
 #username, .password {
     border-radius: 6px;
-    font-size: 17px;
+    font-size: 18px;
     padding: 14px 16px;
     width: 330px;
+    letter-spacing: 2px;
     border: 1px solid #dddfe2;
     color: #1d2129;
     line-height: 16px;
@@ -330,14 +331,7 @@ select option[disabled] {
     transition: 0.2s all ease-out
 }
 
-.password-lock{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 25px;
-}
+
 
 .password-input{
     width: 200px;
@@ -348,7 +342,7 @@ select option[disabled] {
     background: none;
     border: none;
     font-size: 18px;
-    color: #000000;
+    color: #ffffff;
     outline: none;
     letter-spacing: 2px;
     transition: all 0.5s;
@@ -364,11 +358,9 @@ select option[disabled] {
 
 .password-toggle:checked ~ .password-input{
     -webkit-text-security: circle;
+    
 }
 
-.password-toggle:checked ~ .password-lock{
-    color: #000000;
-}
 
 .password-toggle:checked ~ .toggle-eye.close{
     opacity: 0;

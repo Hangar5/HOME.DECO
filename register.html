@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/register.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="animaciones.css">
+    <link rel="stylesheet" href="assets/css/animaciones.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="navbar__img">
+            <a href="index.html"><img src="assets/images/Logo-img.png" alt="Logo-HOME.DECO"></a>
+        </div>
+    <nav class="header__navbar">
+        <!-- Menu -->
+        <label for="menu-toggle" class="menu-label">
+            <img src="assets/svg/menu.svg" alt="" class="menu-icon" />
+        </label>
+        <input type="checkbox" id="menu-toggle" />
+
+        <!-- lista de Navegación -->
+        
+        <ul>
+            
+            <li>
+                <a class="navbar__link active" href="index.html">Home</a>
+            </li>
+        </ul>
+        
+        <label for="cart-toggle" class="cart-label">
+            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+        </label>
+        <input type="checkbox" id="cart-toggle" />
+
+        <div class="cart">
+            <h2>Tus Productos</h2>
+            <div class="alert alert-info">El carrito de compras está vacío. </div>
+            <span class="divider"></span>
+    
+            <div class="cart-total">
+            <p>Total:</p>
+            <span>00000.00$</span>
+            </div>
+            <button class="btn-add">Comprar</button>
+        </div>
+        <div class="overlay"></div>
+
+    </nav>
+    </header>
+    
+    <!--FORMULARIO DE REGISTRO -->
+    <div id="register">
+        <div class="register-info">
+            <h2 class="subtitle_h2">Registrarte</h2>
+            <p class="subtitle_p">Es rápido y fácil</p>
+        </div>
+        <!-- FORM -->
+        <form id="form-register" action="">
+            <input type="text" id="nombre" placeholder="Nombre completo" required="required">
+            <input type="text" id="email" placeholder="Correo electronico" required="required">
+            <input type="password" id="password" placeholder="Contraseña" required="required">
+            <button type="submit" id="submit_btn">Registrate</button>
+            <p class="text-lf">Al registrarte, aceptas nuestras condiciones de uso y políticas de privacidad.</p>
+            <p class="text-lf">¿ya tienes cuenta? 
+                <a class="en_login" href="login.html">Inicia sesión</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
