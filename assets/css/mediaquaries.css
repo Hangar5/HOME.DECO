@@ -131,6 +131,10 @@ li .navbar__link{
     width: 100%;
 }
 
+#contacto form{
+    align-items: center;
+}
+
 }
 
 /* MEDIA 800PX */
