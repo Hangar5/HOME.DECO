@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/register.css">
     <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="animaciones.css">
+    <link rel="stylesheet" href="assets/css/@media.css">
     <link rel="stylesheet" href="assets/css/animaciones.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -15,52 +15,100 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="navbar__img">
-            <a href="index.html"><img src="assets/images/Logo-img.png" alt="Logo-HOME.DECO"></a>
-        </div>
-    <nav class="header__navbar">
-        <!-- Menu -->
-        <label for="menu-toggle" class="menu-label">
-            <img src="assets/svg/menu.svg" alt="" class="menu-icon" />
-        </label>
-        <input type="checkbox" id="menu-toggle" />
 
-        <!-- lista de Navegación -->
-        
-        <ul>
-            
-            <li>
-                <a class="navbar__link active" href="index.html">Home</a>
-            </li>
-            <li>
-                <a target="_blank" class="login__text--link" href="login.html">
-                    <img src="assets/svg/perfil.svg" alt="human-perfil">Ingresar / Registrarme
-                </a>
-            </li>
-        </ul>
-        
-        <label for="cart-toggle" class="cart-label">
-            <i class="fa-solid fa-cart-shopping cart-icon"></i>
-        </label>
-        <input type="checkbox" id="cart-toggle" />
 
-        <div class="cart">
-            <h2>Tus Productos</h2>
-            <div class="alert alert-info">El carrito de compras está vacío. </div>
-            <span class="divider"></span>
+    <!-- HEADER -->
+
+    <header>
+
+        <!-- LOGO -->
     
-            <div class="cart-total">
-            <p>Total:</p>
-            <span>00000.00$</span>
-            </div>
-            <button class="btn-add">Comprar</button>
+        <div>
+            <a href="index.html">
+                <img src="assets/images/Logo-img.png" alt="HOME.DECO-LOGO" class="logo">
+            </a>
         </div>
-        <div class="overlay"></div>
-
-    </nav>
-    </header>
+    
+        <!-- NAVBAR - MENU - LISTA DE NAVEGACIÓN -->
+    
+        <nav id="navbar">
+    
+            <!-- MENU DESPLEGABLE -->
+    
+            <label for="menu-toggle" class="menu-label">
+                <img src="assets/svg/menu.svg" alt="" class="menu-icon" />
+            </label>
+            <input type="checkbox" id="menu-toggle" />
+    
+            <!-- LISTA DE NAVEGACIÓN -->
+    
+            <ul class="navbar-list">
+                <li><a class="navbar_link" href="">HOME</a></li>
+            <div class="dropdown">
+                <select class="dropdown-select" name="productos">
+                    <option value="" disabled selected>Productos</option>
+                    <option value="productos/muebles.html">Muebles</option>
+                    <option value="productos/accesorios.html">Accesorios</option>
+                    <option value="productos/ropa.html">Remeras</option>
+                    <option value="productos/pantalones.html">Pantalones</option>
+                    <option value="productos/hombre.html">Hombre</option>
+                    <option value="productos/mujer.html">Mujer</option>
+                    <option value="productos/niño.html">niño</option>
+                </select>
+                <div class="dropdown-icon">&#9660;</div>
+            </div>
+                <li><a class="navbar_link" href="">Sobre nosotros</a></li>
+                <li><a class="navbar_link" href="">Contacto</a></li>
+                <div class="navbar-perfil">
+                    <img class="navbar_img-perfil" src="assets/images/perfil.png" alt="perfil">    
+                        <a target="_blank" class="link" href="login.html">
+                            <span>Ingresar / Registrarme</span>
+                        </a>
+                </div>
+            </ul>
+    
+            <!-- CARRITO -->
+    
+            <label for="cart-toggle" class="cart-label">
+                <i class="fa-solid fa-cart-shopping cart-icon"></i>
+            </label>
+            <input type="checkbox" id="cart-toggle" />
+    
+            <!-- CONTENIDO DE PRODUCTOS -->
+    
+            <div class="cart">
+                <h2>Tus Productos</h2>
+        
+                <div class="cart-item">
+                    <img src="./assets/images/mueble.jpg" alt="Muebles del carrito" />
+                    <div class="item-info">
+                        <h3 class="item-title">Mesa Escritorio Estilo Industrial </h3>
+                        <p class="item-bid">Cupon de 20%</p>
+                        <span class="item-price">1.005.068,99 $</span>
+                    </div>
+                    <div class="item-handler">
+                        <span class="quantity-handler down">-</span>
+                        <span class="item-quantity">1</span>
+                        <span class="quantity-handler up">+</span>
+                    </div>
+                </div>
+    
+                <span class="divider"></span>
+    
+                <div class="cart-total">
+                    <p>Total:</p>
+                    <span>999.999,99</span>
+                </div>
+                    <button class="btn-add">Comprar</button>
+                </div>
+    
+                <!-- EFECTO GLASS -->
+    
+                <div class="overlay"></div>
+            </div>
+    
+        </nav>
+        </header>
     
     <!--FORMULARIO DE REGISTRO -->
     <div id="register">

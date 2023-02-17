@@ -4,101 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME.DECO</title>
+    <title>HOME.DECO | tienda de ropa y muebles</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animaciones.css">
-    <link rel="stylesheet" href="assets/css/mediaquaries.css">
-    <link rel="stylesheet" href="animaciones.css">
+    <link rel="stylesheet" href="assets/css/@media.css">
+
+    <!-- AWESOME CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
 <body>
+    
 
-    <!--HEADER-->
-    <header id="header">
-        <div class="navbar__img">
-            <a href="index.html"><img src="assets/images/Logo-img.png" alt="Logo-HOME.DECO"></a>
-        </div>
-    <nav class="header__navbar">
-        <!-- Menu -->
+    <!-- HEADER -->
+
+    <header>
+
+    <!-- LOGO -->
+
+    <div>
+        <a href="index.html">
+            <img src="assets/images/Logo-img.png" alt="HOME.DECO-LOGO" class="logo">
+        </a>
+    </div>
+
+    <!-- NAVBAR - MENU - LISTA DE NAVEGACIÓN -->
+
+    <nav id="navbar">
+
+        <!-- MENU DESPLEGABLE -->
+
         <label for="menu-toggle" class="menu-label">
             <img src="assets/svg/menu.svg" alt="" class="menu-icon" />
         </label>
         <input type="checkbox" id="menu-toggle" />
 
-        <!-- lista de Navegación -->
-        
-        <ul>
-            
-            <li>
-                <a class="navbar__link active" href="#">Home</a>
-            </li>
-            <li>
-                <select class="navbar__link--product" onchange="location = this.value;">
-                    <option value="" disabled selected>Productos</option>
-                    <option value="productos/muebles.html">Muebles</option>
-                    <option value="productos/accesorios.html">Accesorios</option>
-                    <option value="productos/ropa.html">Remeras</option>
-                    <option value="productos/pantalones.html">Pantalones</option>
-                    <option value="productos/hombre.html">Hombre</option>
-                    <option value="productos/mujer.html">Mujer</option>
-                    <option value="productos/niño.html">niño</option>
-                </select>
-            </li>
-            <li>
-                <a class="navbar__link" href="#">Sobre nosotros</a>
-            </li>
-            <li>
-                <a class="navbar__link" href="#">Contacto</a>
-            </li>
-            <li>
-                <a target="_blank" class="login__text--link" href="login.html">
-                    <img src="assets/svg/perfil.svg" alt="human-perfil">Ingresar / Registrarme
-                </a>
-            </li>
+        <!-- LISTA DE NAVEGACIÓN -->
+
+        <ul class="navbar-list">
+            <li><a class="navbar_link" href="">HOME</a></li>
+        <div class="dropdown">
+            <select class="dropdown-select" name="productos">
+                <option value="" disabled selected>Productos</option>
+                <option value="productos/muebles.html">Muebles</option>
+                <option value="productos/accesorios.html">Accesorios</option>
+                <option value="productos/ropa.html">Remeras</option>
+                <option value="productos/pantalones.html">Pantalones</option>
+                <option value="productos/hombre.html">Hombre</option>
+                <option value="productos/mujer.html">Mujer</option>
+                <option value="productos/niño.html">niño</option>
+            </select>
+            <div class="dropdown-icon">&#9660;</div>
+        </div>
+            <li><a class="navbar_link" href="">Sobre nosotros</a></li>
+            <li><a class="navbar_link" href="">Contacto</a></li>
+            <div class="navbar-perfil">
+                <img class="navbar_img-perfil" src="assets/images/perfil.png" alt="perfil">    
+                    <a target="_blank" class="link" href="login.html">
+                        <span>Ingresar / Registrarme</span>
+                    </a>
+            </div>
         </ul>
-        
+
+        <!-- CARRITO -->
+
         <label for="cart-toggle" class="cart-label">
             <i class="fa-solid fa-cart-shopping cart-icon"></i>
         </label>
         <input type="checkbox" id="cart-toggle" />
 
+        <!-- CONTENIDO DE PRODUCTOS -->
+
         <div class="cart">
             <h2>Tus Productos</h2>
-            <div class="alert alert-info">El carrito de compras está vacío. </div>
-            <span class="divider"></span>
     
-            <div class="cart-total">
-            <p>Total:</p>
-            <span>00000.00$</span>
+            <div class="cart-item">
+                <img src="./assets/images/mueble.jpg" alt="Muebles del carrito" />
+                <div class="item-info">
+                    <h3 class="item-title">Mesa Escritorio Estilo Industrial </h3>
+                    <p class="item-bid">Cupon de 20%</p>
+                    <span class="item-price">1.005.068,99 $</span>
+                </div>
+                <div class="item-handler">
+                    <span class="quantity-handler down">-</span>
+                    <span class="item-quantity">1</span>
+                    <span class="quantity-handler up">+</span>
+                </div>
             </div>
-            <button class="btn-add">Comprar</button>
+
+            <span class="divider"></span>
+
+            <div class="cart-total">
+                <p>Total:</p>
+                <span>999.999,99</span>
+            </div>
+                <button class="btn-add">Comprar</button>
+            </div>
+
+            <!-- EFECTO GLASS -->
+
+            <div class="overlay"></div>
         </div>
-        <div class="overlay"></div>
 
     </nav>
     </header>
+
+    <!-- MAIN -->
+
     <main>
 
-        <!-- Hero -->
+        <!-- HERO -->
+
         <section id="hero">
-            <div class="hero__info text--color title--color">
-                <h1 class="title--color">HOME.DECO: la tienda de decoración y moda que estabas buscando</h1>
+            <div class="hero-info">
+                <h1>decoración y moda que estabas buscando</h1>
                 <p>En <span>HOME.DECO</span> ofrecemos una amplia variedad de productos para decorar tu hogar con estilo, incluyendo muebles, ropa y accesorios de iluminación. Ofrecemos también asesoramiento personalizado para ayudarte a encontrar lo que mejor se adapte a tus necesidades y gustos.</p>
             </div>
             <div class="hero__container tamaño--img">
-                <img src="assets/images/Decoración.png" alt="">
+                <img src="assets/images/Decoración.png" alt="" width="400px">
             </div>
         </section>
 
-
-
-        <!-- productos -->
+        <!-- PRODUCTOS -->
 
         <section id="productos">
             <div class="product__info">
-                <h2 class="align--center">PRODUCTOS</h2>
+                <h2>Productos</h2>
             </div>
             <div class="productos--categorias">
                 <a class="btn btn-color" href="#">Muebles</a>
@@ -106,82 +138,80 @@
                 <a class="btn btn-color" href="#">Accesorios decorativos</a>
                 <a class="btn btn-color" href="#">Zapatillas y Sandalias</a>
                 <a class="btn btn-color" href="#">Pantalones</a>
-                <a class="btn btn-color" href="#">buzos</a>
             </div>
+        </section>
 
-            <!-- Categorias de productos -->
+        <!-- Categorias de productos -->
 
-            <div id="product__categories">
-                <div class="container__product">
-                    <div class="categories__container">
-                        <div class="categories-item">
-                            <div class="categories-item--inside">
-                                <img src="assets/images/camperas-buzos.jpg" alt="Camperas y buzos">
-                                <h2>Camperas y Buzos</h2>
-                            </div>
-                        </div>
-                        <div class="categories-item">
-                            <div class="categories-item--inside">
-                                <img src="assets/images/mochilas-bolsos.jpg" alt="Mochilas y bolsos">
-                                <h2>Mochilas y bolsos</h2>
-                            </div>
-                        </div>
-                        <div class="categories-item">
-                            <div class="categories-item--inside">
-                                <img src="assets/images/zapatillas-botas.jpg" alt="Zapatillas y botas">
-                                <h2>Zapatillas y botas</h2>
-                            </div>
-                        </div>
-                        <div class="categories-item">
-                            <div class="categories-item--inside">
-                                <img src="assets/images/pantalones-shorts.jpg" alt="Pantalones y shorts">
-                                <h2>Pantalones y shorts</h2>
-                            </div>
-                        </div>
-                        <div class="categories-item">
-                            <div class="categories-item--inside">
-                                <img src="assets/images/muebles.jpg" alt="Muebles">
-                                <h2>Muebles</h2>
-                            </div>
-                        </div>
-                        <div class="categories-item">
-                            <div class="categories-item--inside">
-                                <img src="assets/images/Iluminación.jpg" alt="Accesorios de iluminación">
-                                <h2>Accesorios de iluminación</h2>
-                            </div>
+        <section id="home-categories">
+            <div class="container">
+                <div id="home-categories-container">	
+                <div class="home-categories-item">
+                <div class="home-categories-item-inside">
+                        <img src="https://d2wxkzn4zrc8hy.cloudfront.net/home-categories/22nov-camperas-buzos.jpg" alt="Abrigos, Camperas y Rompevientos">
+                        <h2>Camperas y buzos</h2>
+                </div>
+                </div>
+                    <div class="home-categories-item">
+                        <div class="home-categories-item-inside">
+                            <a href="/categoria/10-mochilas-bolsos"><img src="https://d2wxkzn4zrc8hy.cloudfront.net/home-categories/23ene-mochilas-bolsos.jpg" alt="Mochilas de camping y urbanas, bolsos">
+                            <h2>Mochilas y Bolsos</h2></a>
                         </div>
                     </div>
+                    <div class="home-categories-item">
+                        <div class="home-categories-item-inside">
+                            <img src="https://d2wxkzn4zrc8hy.cloudfront.net/home-categories/22nov-zapatillas-botas.jpg" alt="Calzado, zapatillas, treking, running, botas">
+                            <h2>Zapatillas y botas</h2>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="home-categories-item">
+                        <div class="home-categories-item-inside">
+                            <img src="https://d2wxkzn4zrc8hy.cloudfront.net/home-categories/22nov-pantalones-shorts.jpg" alt="Pantalones, Bermudas, Shorts">
+                            <h2>Pantalones y Shorts</h2>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="home-categories-item">
+                        <div class="home-categories-item-inside">
+                            <a href="/categoria/11-camping"><img src="https://d2wxkzn4zrc8hy.cloudfront.net/home-categories/22nov-carpas.jpg" alt="Carpas, camping, bolsas de dormir, campamento">
+                            <h2>Carpas y Bolsas de Dormir</h2></a>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="home-categories-item">
+                        <div class="home-categories-item-inside">
+                            <img src="https://d2wxkzn4zrc8hy.cloudfront.net/home-categories/22nov-accesorios.jpg" alt="Guantes, toallas, gorras, antiparras, medias">
+                            <h2>Accesorios</h2>
+                        </div>
+                    </div>    
                 </div>
             </div>
+        </section>
+        
+        <!-- GENDER -->
 
-            <!-- GENDER -->
-
-            <div id="gender">
-                <div class="gender__container">
-                    <div class="gender__options">
-                        <div class="content__gender--item">
-                            <a href="#">
-                                <img src="assets/images/hombre.jpg" alt="Hombre">
-                            </a>
-                        </div>
-                    
-                        <div class="content__gender--item">
-                            <a href="#">
-                                <img src="assets/images/mujer.jpg" alt="Mujer">
-                            </a>
-                        </div>
-                        <div class="content__gender--item">
-                            <a href="#">
-                                <img src="assets/images/niños.jpg" alt="Niños">
-                            </a>
-                        </div>
-                    </div>
+        <section id="cards-section">
+            <div class="cards-container">
+                <div class="card">
+                    <img src="assets/images/mujer.jpg" alt="">
+                </div>
+        
+                <div class="card">
+                    <img src="assets/images/hombre-2.jpg" alt="">
+                </div>
+        
+                <div class="card">
+                    <img src="assets/images/niños.png" alt="">
                 </div>
             </div>
         </section>
 
-
         <!-- CONTACTO -->
+
         <section id="contacto">
             <div class="contact-info">
             <h2>contáctanos</h2>
@@ -202,36 +232,34 @@
         </section>
     </main>
 
-    <footer>
-        <footer class="pie-pagina">
-            <div class="grupo-1">
-                <div class="box">
-                    <figure>
-                        <a href="#">
-                            <img src="assets/images/Logo-img.png" alt="Logo de HOME.DECO">
-                        </a>
-                    </figure>
-                </div>
-                <div class="box">
-                    <h2>SOBRE NOSOTROS</h2>
-                    <p>HOME.DECO es una tienda especializada en decoración de interiores. Ofrecemos una amplia variedad de productos, desde muebles hasta accesorios de iluminación, y nos enfocamos en ayudarte a encontrar lo que mejor se adapte a tus necesidades y gustos.</p>
-                    <p>¡Queremos que tu hogar refleje tu estilo y personalidad!</p>
-                </div>
-                <div class="box">
-                    <h2>SIGUENOS</h2>
-                    <div class="red-social">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-instagram"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-youtube"></a>
-                    </div>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="assets/images/Logo-img.png" alt="Logo de HOME.DECO">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>HOME.DECO es una tienda especializada en decoración de interiores. Ofrecemos una amplia variedad de productos, desde muebles hasta accesorios de iluminación, y nos enfocamos en ayudarte a encontrar lo que mejor se adapte a tus necesidades y gustos.</p>
+                <p>¡Queremos que tu hogar refleje tu estilo y personalidad!</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
                 </div>
             </div>
-            <div class="grupo-2">
-                <small>&copy; 2023 <b>HOME.DECO</b> - Todos los Derechos Reservados.</small>
-            </div>
-        </footer>
-    </body>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>HOME.DECO</b> - Todos los Derechos Reservados.</small>
+        </div>
     </footer>
+    
 </body>
 </html>
