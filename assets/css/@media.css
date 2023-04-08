@@ -238,6 +238,11 @@
         line-height: 25px;
         font-size: 1.57rem;
     }
+
+    textarea{
+        max-width: 300px;
+        max-height: 150px;
+    }
 }
 /* @media max-width: 360px */
 @media (max-width: 360px){

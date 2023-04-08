@@ -489,6 +489,7 @@ main {
     margin-top: 0;
     top: 40%;
     position: absolute;
+    pointer-events: none;
     transition: margin-top ease-in-out .2s;
 }
 
