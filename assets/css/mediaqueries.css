@@ -130,6 +130,11 @@
         border: 2px solid #ffffff;
         width: 200px;
     }
+
+    textarea{
+        max-width: 300px;
+        max-height: 150px;
+    }
 }
 
 /* @media max-width: 959px */
@@ -237,11 +242,6 @@
     .home-categories-item h2 {
         line-height: 25px;
         font-size: 1.57rem;
-    }
-
-    textarea{
-        max-width: 300px;
-        max-height: 150px;
     }
 }
 /* @media max-width: 360px */
